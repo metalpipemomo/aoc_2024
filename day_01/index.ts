@@ -6,10 +6,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function getOccurences<T>(list: T[], target: T) {
-	let count = 0;
-	list.forEach((element) => element === target ? count++ : null);
+  let count = 0;
+  list.forEach((element) => (element === target ? count++ : null));
 
-	return count;
+  return count;
 }
 
 function getLists(): [number[], number[]] {
@@ -48,17 +48,16 @@ function part_two() {
   const [leftList, rightList] = getLists();
 
   const similarityScore = leftList.reduce(
-    (prev, curr) =>
-      prev + (curr * getOccurences(rightList, curr)),
+    (prev, curr) => prev + curr * getOccurences(rightList, curr),
     0
   );
 
-	return similarityScore;
+  return similarityScore;
 }
 
 function main() {
   console.log(part_one()); // 1941353
-	console.log(part_two()); // 22539317
+  console.log(part_two()); // 22539317
 }
 
 main();
