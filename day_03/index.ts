@@ -5,7 +5,7 @@ import path from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-function day_one() {
+function part_one() {
   const file = readFileSync(path.join(__dirname, 'input.txt'), {
     encoding: 'utf-8',
   });
@@ -21,7 +21,7 @@ function day_one() {
   return count;
 }
 
-function day_two() {
+function part_two() {
   const file = readFileSync(path.join(__dirname, 'input.txt'), {
     encoding: 'utf-8',
   });
@@ -45,6 +45,6 @@ function day_two() {
 }
 
 (() => {
-  console.log(day_one());
-  console.log(day_two());
+  console.log(part_one());
+  console.log(part_two());
 })();
